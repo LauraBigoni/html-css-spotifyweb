@@ -12,6 +12,11 @@ body {
     font-size: 16px;
 }
 
+main {
+    background-color: rgb(20,25,34);
+    overflow: auto;
+}
+
 /**Utilities**/
 .container {
     max-width: 1200px;
@@ -22,7 +27,8 @@ body {
     color: rgb(210,210,210);
 }
 
-/**Header**/
+@media screen and (min-width: 550px) {
+/**Header top menu**/
 #top-menu a {
     position: absolute;
     top: 20px;
@@ -33,15 +39,7 @@ body {
     border: 1px solid white;
     border-radius: 20px;
 }
-
-/**Main**/
-main {
-    background-color: rgb(20,25,34);
-    overflow: auto;
-}
-
-/**Top menu**/
-#top-menu  {
+#top-menu {
     height: 80px;
     width: 100%;
     background-color: rgba(8,11,18, 0.5);
@@ -49,115 +47,49 @@ main {
     top: 0;
     left: 0;
 }
-
-/**Logo**/
-.logo {
-    margin: 10px;
-    width: 75%;
-}
-
 /**sidebar menu**/
+#sidebar-menu span, .logo, 
+.add-playlist, .playlist,
+.administration span, hr {
+    display: none;
+}
 #sidebar-menu {
     height: calc(100vh - 80px);
-    width: 250px;
+    width: 50px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: black;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
-
-li {
-    padding-left: 20px;
+#sidebar-menu .navigation {
+    flex-grow: 1;
 }
-
-ul li a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
+#sidebar-menu img.download {
+    width: 50%;
+    margin-left: 10px;
 }
-
-/**Navigation**/
-.navigation ul {
-    list-style-type: none;
-    padding-top: 20px;
+#sidebar-menu .spotify-logo,
+#sidebar-menu .navigation,
+#sidebar-menu .playlist {
+    margin: 10px;
 }
-
-.navigation li.active {
-    padding-left: 16px;
-    border-left: 4px solid rgb(173,255,47);
-}
-
-.navigation ul img {
-    width: 35px;
-    padding-right: 5px;
-}
-
-/**Playlist**/
-.add-playlist .title {
-    padding: 0px 20px 10px 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.add-playlist .fa-plus {
-    font-size: 30px;
-    padding: 6px 8px;
-    color: black;
-    margin-right: 10px;
-    background-color: rgb(210,210,210);
-}
-
-.playlist {
-    position: absolute;
-    left: 0;
-    top: 340px;
-}
-
-.playlist li {
-    text-transform: capitalize;
-    overflow-y: auto;
-}
-
-/**User administration section**/
-.administration {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.administration hr {
-    margin: 5px 20px 10px 20px;
-    width: 210px;
-}
-
-.administration ul img {
-    width: 25px;
-    margin-right: 10px;
-}
-
-.administration img.user {
+#sidebar-menu .administration img.user {
     border-radius: 50%;
     width: 35px;
+    height: 35px;
+    margin-left: 8px;
+    margin-bottom: 5px;
     background-color: rgb(128,128,128);
 }
-
-.administration .user span {
-    font-size: 20px;
-}
-
 /**Main content**/
 #main-content {
     width: 100%;
     height: calc(100vh - 80px);
-    padding: 100px 0 10px 270px;
+    padding: 90px 0 0 60px;
 }
-
-/**Footer**/
-
-
 /**Controls**/
 #controls {
     position: fixed;
@@ -166,4 +98,5 @@ ul li a {
     width: 100%;
     height: 80px;
     background-color: rgb(40,40,40);
+}
 }
