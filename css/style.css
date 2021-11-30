@@ -38,6 +38,11 @@ body {
     top: 0;
     left: 0;
 }
+/**Logo**/
+.logo {
+    margin: 20px;
+    width: 60%;
+}
 
 /**Main**/
 main {
@@ -48,12 +53,11 @@ main {
 /**sidebar menu**/
 #sidebar-menu {
     height: calc(100vh - 80px);
-    width: 200px;
+    width: 250px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: black;
-    padding-left: 20px;
 }
 
 .playlist {
