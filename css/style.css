@@ -9,6 +9,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 14px;
 }
 
 /**Utilities**/
@@ -28,7 +29,6 @@ body {
     right: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
     padding: 10px 40px;
     border: 1px solid white;
     border-radius: 20px;
@@ -66,32 +66,26 @@ main {
     background-color: black;
 }
 
+li {
+    padding-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 /**Navigation**/
 .navigation ul {
     list-style-type: none;
-    padding: 20px 0;
+    padding-top: 20px;
     
-}
-
-.navigation li {
-    padding-left: 20px;
 }
 
 .navigation li.active {
     padding-left: 16px;
-}
-
-.navigation ul li a {
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    padding-bottom: 10px;
-    font-size: 14px;
-}
-
-.navigation li.active {
     border-left: 4px solid rgb(173,255,47);
 }
 
@@ -101,16 +95,31 @@ main {
 }
 
 /**Playlist**/
+.add-playlist .title {
+    padding: 0px 20px 10px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.add-playlist .fa-plus {
+    font-size: 30px;
+    padding: 6px 8px;
+    color: black;
+    margin-right: 10px;
+    background-color: rgb(210,210,210);
+}
+
 .playlist {
+    padding-top: 10px;
     position: fixed;
     width: 220px;
-    height: 250px;
-    font-size: 16px;
+    height: 300px;
     overflow-y: auto;
-    top: 250px;
-    bottom: 200px;
-    left: 5px;
-    line-height: 30px;
+    line-height: 25px;
+}
+
+.playlist li {
+    text-transform: capitalize;
 }
 
 /**Main content**/
