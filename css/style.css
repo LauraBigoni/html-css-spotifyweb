@@ -8,12 +8,17 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 /**Utilities**/
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.text-grey {
+    color: rgb(210,210,210);
 }
 
 /**Header**/
@@ -29,25 +34,26 @@ body {
     border-radius: 20px;
 }
 
+/**Main**/
+main {
+    background-color: rgb(20,25,34);
+    overflow: auto;
+}
+
 /**Top menu**/
 #top-menu  {
     height: 80px;
     width: 100%;
-    background-color: rgba(22, 22, 53, 0.5);
+    background-color: rgba(8,11,18, 0.5);
     position: fixed;
     top: 0;
     left: 0;
 }
+
 /**Logo**/
 .logo {
-    margin: 20px;
-    width: 60%;
-}
-
-/**Main**/
-main {
-    background-color: rgb(32, 36, 56);
-    overflow: auto;
+    margin: 10px;
+    width: 75%;
 }
 
 /**sidebar menu**/
@@ -60,13 +66,51 @@ main {
     background-color: black;
 }
 
+/**Navigation**/
+.navigation ul {
+    list-style-type: none;
+    padding: 20px 0;
+    
+}
+
+.navigation li {
+    padding-left: 20px;
+}
+
+.navigation li.active {
+    padding-left: 16px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.navigation li.active {
+    border-left: 4px solid rgb(173,255,47);
+}
+
+.navigation ul img {
+    width: 35px;
+    padding-right: 5px;
+}
+
+/**Playlist**/
 .playlist {
     position: fixed;
-    width: 210px;
+    width: 220px;
+    height: 250px;
     font-size: 16px;
     overflow-y: auto;
-    top: 200px;
+    top: 250px;
     bottom: 200px;
+    left: 5px;
+    line-height: 30px;
 }
 
 /**Main content**/
@@ -86,5 +130,5 @@ main {
     left: 0;
     width: 100%;
     height: 80px;
-    background-color: rgb(73, 73, 73);
+    background-color: rgb(40,40,40);
 }
