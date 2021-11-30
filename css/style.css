@@ -18,16 +18,11 @@ main {
 }
 
 /**Utilities**/
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .text-grey {
     color: rgb(210,210,210);
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 550px){
 /**Header top menu**/
 #top-menu a {
     position: absolute;
@@ -48,9 +43,10 @@ main {
     left: 0;
 }
 /**sidebar menu**/
-#sidebar-menu span, .logo, 
-.add-playlist, .playlist,
-.administration span, hr {
+#sidebar-menu span, 
+#sidebar-menu hr, 
+.logo, .add-playlist, 
+.playlist, .administration span {
     display: none;
 }
 #sidebar-menu {
@@ -92,11 +88,77 @@ main {
 }
 /**Controls**/
 #controls {
+    display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 80px;
     background-color: rgb(40,40,40);
+}
+#controls img {
+    width: 50px;
+    margin: 0 10px;
+}
+#controls .now-playing {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+#controls .music-controls {
+    flex-grow: 3;
+}
+#controls .volume-devices {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content:
+}
+#controls .volume-devices i {
+    padding: 0 5px;
+}
+footer hr.volume-right {
+    border: 2px solid rgb(90,90,90);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 38px;
+    right: 0px;
+    margin-right: 10px;
+    width: 60px;
+}
+footer hr.volume-right.overlay {
+    position: absolute;
+    bottom: 38px;
+    right: 60px;
+    width: 30px;
+    border: 2px solid rgb(255, 255, 255);
+}
+footer hr.volume-bottom {
+    position: relative;
+    top: 55%;
+    left: 40%;
+    border-radius: 10px;
+    border: 2px solid rgb(90,90,90);
+    width: 30%;
+}
+footer hr.volume-bottom.overlay {
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    top: 50%;
+    left: 40%;
+    width: 5%;
+}
+.horizontal-rule {
+    width: 100%;
+    height: 80px;
+}
+.horizontal-rule span {
+    position: relative;
+    font-size: 10px;
+    top: 65%;
+    left: 34%;
+}
+.horizontal-rule span.minute-start {
+    margin-right: 34%;
 }
 }
