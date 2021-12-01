@@ -29,6 +29,51 @@ main {
     display: flex;
 }
 
+/**Effetti HOVER**/
+.text-grey:hover {
+    color: white;
+    transition: .2s ease-in;
+}
+
+.add-playlist a:hover .fa-plus {
+    cursor: pointer;
+    background-color: white;
+    transition: .2s ease-in;
+}
+
+#sidebar-menu .navigation ul a:hover img,
+#sidebar-menu .administration ul a:hover img {
+    filter: invert(0);
+    transition: .2s ease-in;
+}
+
+.track-info:hover {
+    text-decoration: underline;
+    color: rgb(106,109,114);
+}
+#controls .progress-controls .progress-bar.overlay:hover,
+#controls .devices .volume-bar.overlay:hover {
+    background-color: rgb(173,255,47);
+    transition: 0s;
+}
+.pointer {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    position: relative;
+    bottom: 3px;
+    left: 90%;
+    border-radius: 50%;
+    display: none;
+}
+#controls .progress-controls .progress-bar.overlay:hover .pointer,
+#controls .devices .volume-bar.overlay:hover .pointer {
+    display: block;
+}
+
+#controls .music-controls i.fa-play-circle:hover {
+    transform: scale(1.2);
+}
 /**sidebar menu**/
 #sidebar-menu span, 
 #sidebar-menu hr, 
@@ -232,6 +277,11 @@ h3 {
     font-weight: 700;
 }
 
+.now-playing img,
+.now-playing span {
+    cursor: pointer;
+}
+
 .now-playing span.track-info {
     font-size: 10px;
     font-weight: 700;
@@ -246,6 +296,7 @@ h3 {
 #controls .music-controls i.fa-play-circle {
     font-size: 28px;
     margin-bottom: 10px;
+    transition: .2s;
 }
 
 .now-playing, .menage-devices, .progress-controls {
@@ -258,7 +309,7 @@ h3 {
 }
 
 .progress-controls span {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 #controls .music-controls i {
@@ -266,7 +317,7 @@ h3 {
 }
 
 .track-controls {
-    flex-grow: 10;
+    flex-grow: 30;
     display: flex;
     align-self: flex-start;
     align-items: center;
@@ -403,6 +454,13 @@ h3 {
     }
     #controls .music-controls i {
         padding: 0 15px;
+    }
+    #controls .now-playing br {
+        display: none;
+    }
+    #controls .now-playing span {
+        display: flex;
+        flex-direction: column;
     }
 }
 /* ---fine media query--- */
