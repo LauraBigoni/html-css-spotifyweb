@@ -163,7 +163,7 @@ main {
     margin: 30px 20px;
 }
 h3 {
-    font-size: 18px;
+    font-size: 14px;
 }
 .for-you h2,
 .artists h2 {
@@ -192,6 +192,8 @@ h3 {
 /**Controls**/
 #controls {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -201,27 +203,94 @@ h3 {
 }
 
 #controls img {
-    width: 50px;
+    width: 30px;
     margin: 0 10px;
 }
 
-#controls .volume-devices {
+#controls .like-folder i {
+    padding-bottom: 5px;
+    padding-left: 15px;
     display: flex;
     align-items: center;
 }
 
-.now-playing {
+.now-playing span.artist-name {
     font-size: 12px;
+    font-weight: 700;
+}
+
+.now-playing span.track-info {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+#controls i {
+    padding: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#controls .music-controls i.fa-play-circle {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.now-playing, .menage-devices, .progress-controls {
     display: flex;
     align-items: center;
 }
 
-.music-controls {
-    flex-grow: 3;
+.now-playing, .menage-devices, .progress-controls, .like-folder {
+    flex-grow: 1;
 }
 
-.volume-devices i {
-    padding: 0 5px;
+.progress-controls span {
+    font-size: 12px;
+}
+
+#controls .music-controls i {
+    padding: 0 10px;
+}
+
+.track-controls {
+    flex-grow: 10;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+#controls .progress-bar {
+    height: 4px;
+    background-color: rgb(102,102,102);
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: .2s ease-in;
+}
+
+#controls .progress-bar.overlay {
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
+    margin:0;
+}
+
+#controls .volume-bar {
+    height: 4px;
+    background-color: rgb(102,102,102);
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#controls .volume-bar.overlay {
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
 }
 
 /* --- SMALL DEVICES --- */
@@ -317,12 +386,18 @@ h3 {
     .for-you .cards, .artists .cards {
         justify-content: flex-start;
     }
+    #controls .music-controls i {
+        padding: 0 15px;
+    }
 }
 /* ---fine media query--- */
 
 /* ---MEDIUM DEVICES--- */
 @media screen and (min-width: 768px) {
-
+    #controls .progress-bar {
+        width: 300px;
+        transition: .2s ease-in;
+}
 }
 /* ---fine media query--- */
 
@@ -331,7 +406,11 @@ h3 {
     .recently-played .cards img,
     .for-you .cards img,
     .artists .cards img {
-    max-width: 200px;
+        max-width: 200px;
+}
+    #controls .progress-bar {
+        width: 450px;
+        transition: .2s ease-in;
 }
 }
 /* ---fine media query--- */

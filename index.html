@@ -194,23 +194,43 @@
             <!-- Preview album / artist name / heart,folder icons -->
             <div class="now-playing">
                 <img src="img/sinister.jpeg" alt="sinister track">
-                <span>Sinister <br> Brano Nome</span>
+                <span class="artist-name">Sinister<br><span class="text-grey track-info">Brano<br>Nome</span></span>
+            </div>
+            <div class="like-folder">
+                <i class="text-grey far fa-heart"></i>
+                <i class="text-grey far fa-folder"></i>
             </div>
             <!-- Player controls -->
-            <div class="music-controls">
-
+            <div class="track-controls">
+                <div class="music-controls">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <i class="far fa-play-circle"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo-alt"></i>
+                </div>
+                <div class="progress-controls">
+                    <span>0:25</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar overlay"></div>
+                    </div>
+                    <span>4:32</span>
+                </div>
             </div>
-            <div class="volume">
-            </div>
+            
             <!-- Queued tracks / devices / volume -->
-            <div class="volume-devices">
-                <i class="fas fa-list"></i>
-                <i class="fas fa-desktop"></i>
-                <i class="fas fa-volume-up"></i>
+            <div class="devices">
+                <div class="menage-devices">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <div class="volume-bar">
+                    <div class="volume-bar overlay"></div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="volume-right">
-            </div>
-        </div>
+            
         </div>
     </footer>
 
