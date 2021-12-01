@@ -10,6 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 14px;
+    overflow: hidden;
 }
 
 main {
@@ -27,6 +28,11 @@ main {
 
 .wrapper {
     display: flex;
+}
+
+.border-top.text-grey:hover,
+h4.text-grey:hover {
+    color: rgb(102,102,102);
 }
 
 /**Effetti HOVER**/
@@ -56,11 +62,13 @@ main {
     text-decoration: underline;
     color: rgb(106,109,114);
 }
+
 #controls .progress-controls .progress-bar.overlay:hover,
 #controls .devices .volume-bar.overlay:hover {
     background-color: rgb(173,255,47);
     transition: 0s;
 }
+
 .pointer {
     height: 10px;
     width: 10px;
@@ -71,6 +79,7 @@ main {
     border-radius: 50%;
     display: none;
 }
+
 #controls .progress-controls .progress-bar.overlay:hover .pointer,
 #controls .devices .volume-bar.overlay:hover .pointer {
     display: block;
@@ -79,9 +88,11 @@ main {
 #controls .music-controls i.fa-play-circle:hover {
     transform: scale(1.2);
 }
+
 #top-menu a:hover {
     transform: scale(1.1);
 }
+
 /**sidebar menu**/
 #sidebar-menu span, 
 #sidebar-menu hr, 
@@ -166,7 +177,6 @@ main {
 
 .recently-played ul,
 .for-you ul, .artists ul {
-    list-style-type: none;
     padding-bottom: 10px;
 }
 
@@ -191,64 +201,81 @@ main {
     top: 2px;
     left: 28px;
 }
+/**Overlay cards**/
+#main-content .fa-play-circle {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
+}
+
+#main-content .card:hover .fa-play-circle {
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+.card img {
+    filter: opacity(1);
+}
+
+.card:hover img {
+    filter: opacity(0.5);
+}
 
 /**Main sections**/
-.recently-played .cards {
+.card {
+    position: relative;
+}
+
+.album {
+    padding-bottom: 10px;
+}
+
+.d-flex {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
-.for-you .cards,
-.artists .cards {
+.recently-played .d-flex-self  {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.for-you .cards ul,
-.artists ul {
-    list-style-type: none;
-}
-
-.recently-played li, .for-you li,
-.artists li {
+    flex-flow: row wrap;
+    justify-content: flex-start;
     text-align: center;
-    font-size: 12px;
-}
-
-.recently-played h2 {
-    margin: 30px 20px;
-}
-
-h3 {
     font-size: 14px;
 }
 
-.for-you h2,
-.artists h2 {
-    margin: 30px 0 0 20px;
+#main-content div {
+    margin-left: 10px;
 }
 
-.for-you h4,
-.artists h4 {
-    margin: 10px 0 30px 20px;
-    font-weight: 500;
-    font-size: 12px;
+#main-content h2, h4 {
+    margin: 30px 20px;
+    text-align: left;
 }
 
-.recently-played .cards img,
-.for-you .cards img,
-.artists .cards img {
+#main-content span, 
+#main-content h2 {
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.recently-played img,
+.for-you  img,
+.artists img {
     max-width: 200px;
+    cursor: pointer;
 }
 
-.artists .cards img {
+.artists img {
     border-radius: 50%;
-}
-
-.artists {
-    padding-bottom: 20px;
 }
 
 /**Footer**/
@@ -440,9 +467,14 @@ h3 {
         margin: 0;
         border-left: 4px solid rgb(173,255,47);
     }
-    .playlist ul.scroll-playlist {
+    ul.scroll-playlist {
+        list-style: none;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+    div.playlist .scroll-playlist {
         text-transform: capitalize;
-        overflow-y: auto;
         line-height: 30px;
     }
     .border-top {
@@ -451,13 +483,12 @@ h3 {
         margin-left: 20px;
         margin-bottom: 10px;
     }
-    .recently-played .cards img,
-    .for-you .cards img,
-    .artists .cards img {
+    .recently-played .card img,
+    .for-you .card img,
+    .artists .card img {
     max-width:150px;
     }
-    .recently-played .cards,
-    .for-you .cards, .artists .cards {
+    .for-you .d-flex, .artists .d-flex {
         justify-content: flex-start;
     }
     #controls .music-controls i {
@@ -478,7 +509,7 @@ h3 {
     #controls .progress-bar {
         width: 300px;
         transition: .2s ease-in;
-}
+    }
     #controls .like-folder {
         display: flex;
         transition: .2s ease-in;
@@ -486,19 +517,22 @@ h3 {
     #controls .like-folder i {
         padding-left: 20px;
     }
+    .recently-played .card {
+        justify-content: ;
+    }
 }
 /* ---fine media query--- */
 
 /* ---LARGE DEVICES--- */
 @media screen and (min-width: 992px) {
-    .recently-played .cards img,
-    .for-you .cards img,
-    .artists .cards img {
+    .recently-played .card img,
+    .for-you .card img,
+    .artists .card img {
         max-width: 200px;
-}
+    }
     #controls .progress-bar {
         width: 450px;
         transition: .2s ease-in;
-}
+    }
 }
 /* ---fine media query--- */
