@@ -41,6 +41,11 @@ main {
     transition: .2s ease-in;
 }
 
+#sidebar-menu a:hover span {
+    color: white;
+    transition: .2s ease-in;
+}
+
 #sidebar-menu .navigation ul a:hover img,
 #sidebar-menu .administration ul a:hover img {
     filter: invert(0);
