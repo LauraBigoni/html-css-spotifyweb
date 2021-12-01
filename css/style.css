@@ -18,7 +18,11 @@ main {
 
 /**Utilities**/
 .text-grey {
-    color: rgb(210,210,210);
+    color: rgb(106,109,114);
+}
+
+.greyscale {
+    filter: invert(50%);
 }
 
 .wrapper {
@@ -94,6 +98,38 @@ main {
     overflow: auto;
 }
 
+#content-menu {
+    padding-top: 90px;
+}
+
+#content-menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#content-menu a {
+    text-decoration: none;
+}
+
+#content-menu li {
+    padding-right: 10px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+}
+#content-menu div.active {
+    border-bottom: 2px solid rgb(173,255,47);
+    width: 30px;
+    position: relative;
+    top: 2px;
+    left: 28px;
+}
 /**Footer**/
 /**Controls**/
 #controls {
@@ -111,22 +147,22 @@ main {
     margin: 0 10px;
 }
 
-#controls .now-playing {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-}
-
-#controls .music-controls {
-    flex-grow: 3;
-}
-
 #controls .volume-devices {
     display: flex;
     align-items: center;
 }
 
-#controls .volume-devices i {
+.now-playing {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.music-controls {
+    flex-grow: 3;
+}
+
+.volume-devices i {
     padding: 0 5px;
 }
 
@@ -190,7 +226,7 @@ main {
     li.active {
         padding-left: 16px;
     }
-    ul li a {
+    #sidebar-menu ul li a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -215,3 +251,4 @@ main {
         margin-bottom: 10px;
     }
 }
+/* ---fine media query--- */
