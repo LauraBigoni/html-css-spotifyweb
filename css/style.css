@@ -79,6 +79,9 @@ main {
 #controls .music-controls i.fa-play-circle:hover {
     transform: scale(1.2);
 }
+#top-menu a:hover {
+    transform: scale(1.1);
+}
 /**sidebar menu**/
 #sidebar-menu span, 
 #sidebar-menu hr, 
