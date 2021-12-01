@@ -74,7 +74,8 @@ main {
 #top-menu a {
     position: absolute;
     top: 20px;
-    right: 10px;
+    right: 20px;
+    font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 40px;
@@ -107,7 +108,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+}
+
+.recently-played ul,
+.for-you ul, .artists ul {
+    list-style-type: none;
+    padding-bottom: 10px;
 }
 
 #content-menu a {
@@ -119,7 +125,7 @@ main {
     padding-bottom: 15px;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     position: relative;
 }
@@ -129,6 +135,58 @@ main {
     position: relative;
     top: 2px;
     left: 28px;
+}
+
+.recently-played .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.for-you .cards,
+.artists .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.for-you .cards ul,
+.artists ul {
+    list-style-type: none;
+}
+.recently-played li, .for-you li,
+.artists li {
+    text-align: center;
+    font-size: 12px;
+}
+
+.recently-played h2 {
+    margin: 30px 20px;
+}
+h3 {
+    font-size: 18px;
+}
+.for-you h2,
+.artists h2 {
+    margin: 30px 0 0 20px;
+}
+
+.for-you h4,
+.artists h4 {
+    margin: 10px 0 30px 20px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.recently-played .cards img,
+.for-you .cards img,
+.artists .cards img {
+    max-width: 200px;
+}
+.artists .cards img {
+    border-radius: 50%;
+}
+.artists {
+    padding-bottom: 20px;
 }
 /**Footer**/
 /**Controls**/
@@ -250,5 +308,30 @@ main {
         margin-left: 20px;
         margin-bottom: 10px;
     }
+    .recently-played .cards img,
+    .for-you .cards img,
+    .artists .cards img {
+    max-width:150px;
+    }
+    .recently-played .cards,
+    .for-you .cards, .artists .cards {
+        justify-content: flex-start;
+    }
+}
+/* ---fine media query--- */
+
+/* ---MEDIUM DEVICES--- */
+@media screen and (min-width: 768px) {
+
+}
+/* ---fine media query--- */
+
+/* ---LARGE DEVICES--- */
+@media screen and (min-width: 992px) {
+    .recently-played .cards img,
+    .for-you .cards img,
+    .artists .cards img {
+    max-width: 200px;
+}
 }
 /* ---fine media query--- */
