@@ -111,6 +111,8 @@ h4.text-grey:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition:width .05s linear;
+    transform:translateX(0) scale(1,1);
 }
 
 #sidebar-menu .navigation {
@@ -400,6 +402,8 @@ h3 {
     }
     #sidebar-menu {
         flex-basis: 230px;
+        transform:translateX(0) scale(1,1);
+        transition:all .1s linear;
     }
     #sidebar-menu span, #sidebar-menu hr, 
     .add-playlist, .playlist, 
