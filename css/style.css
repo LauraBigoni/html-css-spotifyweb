@@ -17,6 +17,10 @@ main {
     background-color: rgb(20,25,34);
 }
 
+img {
+    max-width: 100%;
+}
+
 /**Utilities**/
 .text-grey {
     color: rgb(106,109,114);
@@ -94,8 +98,7 @@ h4.text-grey:hover {
 }
 
 /**sidebar menu**/
-#sidebar-menu span, 
-#sidebar-menu hr, 
+#sidebar-menu span, #sidebar-menu hr, 
 .logo, .add-playlist, 
 .playlist, .administration span {
     display: none;
@@ -119,9 +122,7 @@ h4.text-grey:hover {
     margin-left: 10px;
 }
 
-#sidebar-menu .spotify-logo,
-#sidebar-menu .navigation,
-#sidebar-menu .playlist {
+#sidebar-menu .spotify-logo, #sidebar-menu .navigation, #sidebar-menu .playlist {
     margin: 10px;
 }
 
@@ -175,8 +176,7 @@ h4.text-grey:hover {
     justify-content: center;
 }
 
-.recently-played ul,
-.for-you ul, .artists ul {
+.recently-played ul, .for-you ul, .artists ul {
     padding-bottom: 10px;
 }
 
@@ -258,8 +258,7 @@ h4.text-grey:hover {
     text-align: left;
 }
 
-#main-content span, 
-#main-content h2 {
+#main-content span, #main-content h2 {
     cursor: pointer;
 }
 
@@ -269,9 +268,7 @@ h3 {
     cursor: pointer;
 }
 
-.recently-played img,
-.for-you  img,
-.artists img {
+.recently-played img, .for-you  img, .artists img {
     max-width: 200px;
     cursor: pointer;
 }
@@ -309,21 +306,6 @@ h3 {
     transition: .2s ease-in;
 }
 
-.now-playing span.artist-name {
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.now-playing img,
-.now-playing span {
-    cursor: pointer;
-}
-
-.now-playing span.track-info {
-    font-size: 10px;
-    font-weight: 700;
-}
-
 #controls i {
     padding: 0 5px;
     font-size: 14px;
@@ -336,30 +318,8 @@ h3 {
     transition: .2s;
 }
 
-.now-playing, .menage-devices, .progress-controls {
-    display: flex;
-    align-items: center;
-}
-
-.now-playing, .menage-devices, .progress-controls, .like-folder {
-    flex-grow: 1;
-}
-
-.progress-controls span {
-    font-size: 10px;
-}
-
 #controls .music-controls i {
     padding: 0 10px;
-}
-
-.track-controls {
-    flex-grow: 30;
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    padding-top: 10px;
-    flex-direction: column;
 }
 
 #controls .progress-bar {
@@ -396,33 +356,63 @@ h3 {
     width: 20%;
 }
 
+.now-playing span.artist-name {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.now-playing img, .now-playing span {
+    cursor: pointer;
+}
+
+.now-playing span.track-info {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.now-playing, .menage-devices, .progress-controls {
+    display: flex;
+    align-items: center;
+}
+
+.now-playing, .menage-devices, .progress-controls, .like-folder {
+    flex-grow: 1;
+}
+
+.progress-controls span {
+    font-size: 10px;
+}
+
+.track-controls {
+    flex-grow: 30;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
 /* --- SMALL DEVICES --- */
 @media screen and (min-width: 576px) {
-    #sidebar-menu .spotify-logo, 
-    #sidebar-menu .navigation, 
-    #sidebar-menu .playlist {
+    /* *Sidebar* */
+    #sidebar-menu .spotify-logo, #sidebar-menu .navigation, #sidebar-menu .playlist {
         margin: 10px 0 0 0;
     }
     #sidebar-menu {
         flex-basis: 230px;
     }
-    #top-menu {
-        width: calc(100% - 230px);
-    }
-    .logo {
-        display: inline;
-        width: 80%;
-        padding-bottom: 10px;
-    }
-    .logo-small {
-        display: none;
-    }
-    #sidebar-menu span, 
-    #sidebar-menu hr, 
+    #sidebar-menu span, #sidebar-menu hr, 
     .add-playlist, .playlist, 
     .administration span {
     display: inline-block;
     }
+    #sidebar-menu ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    }
+    
     .playlist {
         flex-grow: 6;
     }
@@ -450,17 +440,25 @@ h3 {
         margin-right: 10px;
         margin-left: 0;
     }
-    li, .logo {
-    padding-left: 20px;
-    }
     li.active {
         padding-left: 16px;
     }
-    #sidebar-menu ul li a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
+    
+    /* *Logo* */
+    .logo {
+        display: inline;
+        width: 80%;
+        padding-bottom: 10px;
+    }
+    .logo-small {
+        display: none;
+    }
+    li, .logo {
+    padding-left: 20px;
+    }
+    /* *Main* */
+    #top-menu {
+        width: calc(100% - 230px);
     }
     .navigation ul {
         list-style-type: none;
@@ -483,14 +481,13 @@ h3 {
         margin-left: 20px;
         margin-bottom: 10px;
     }
-    .recently-played .card img,
-    .for-you .card img,
-    .artists .card img {
+    .recently-played .card img, .for-you .card img, .artists .card img {
     max-width:150px;
     }
     .for-you .d-flex, .artists .d-flex {
         justify-content: flex-start;
     }
+    /* *Footer* */
     #controls .music-controls i {
         padding: 0 15px;
     }
@@ -525,9 +522,7 @@ h3 {
 
 /* ---LARGE DEVICES--- */
 @media screen and (min-width: 992px) {
-    .recently-played .card img,
-    .for-you .card img,
-    .artists .card img {
+    .recently-played .card img, .for-you .card img, .artists .card img {
         max-width: 200px;
     }
     #controls .progress-bar {
