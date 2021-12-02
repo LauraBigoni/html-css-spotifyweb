@@ -139,7 +139,7 @@ h4.text-grey:hover {
 #top-menu a {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 40px;
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
@@ -468,8 +468,8 @@ h3 {
     div.playlist .scroll-playlist {
         text-transform: capitalize;
         line-height: 30px;
+        height: calc(100vh - 430px);
         list-style: none;
-        height: 250px;
         overflow-x: hidden;
         overflow-y: auto;
     }
