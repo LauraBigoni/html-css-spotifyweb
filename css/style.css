@@ -34,15 +34,15 @@ img {
     display: flex;
 }
 
-.border-top.text-grey:hover,
-h4.text-grey:hover {
-    color: rgb(102,102,102);
-}
-
 /**Effetti HOVER**/
 .text-grey:hover {
     color: white;
     transition: .2s ease-in;
+}
+
+.border-top.text-grey:hover,
+h4.text-grey:hover {
+    color: rgb(102,102,102);
 }
 
 .add-playlist a:hover .fa-plus {
@@ -412,7 +412,6 @@ h3 {
     align-items: center;
     padding-bottom: 5px;
     }
-    
     .playlist {
         flex-grow: 6;
     }
@@ -443,7 +442,6 @@ h3 {
     li.active {
         padding-left: 16px;
     }
-    
     /* *Logo* */
     .logo {
         display: inline;
