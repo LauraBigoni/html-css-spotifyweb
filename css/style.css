@@ -194,13 +194,15 @@ h4.text-grey:hover {
     position: relative;
 }
 
-#content-menu div.active {
-    border-bottom: 2px solid rgb(173,255,47);
-    width: 30px;
-    position: relative;
-    top: 2px;
-    left: 28px;
+#content-menu a.active::after {
+    content: '';
+    display: block;
+    background-color: rgb(173,255,47);
+    width: 30%;
+    height: 2px;
+    margin: 3px auto;
 }
+
 /**Overlay cards**/
 #main-content .fa-play-circle {
     font-size: 80px;
@@ -467,15 +469,13 @@ h3 {
         margin: 0;
         border-left: 4px solid rgb(173,255,47);
     }
-    ul.scroll-playlist {
-        list-style: none;
-    height: 250px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    }
     div.playlist .scroll-playlist {
         text-transform: capitalize;
         line-height: 30px;
+        list-style: none;
+        height: 250px;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .border-top {
         border-top: 1px solid;
